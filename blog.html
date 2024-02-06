@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #blog {
+            max-width: 800px; 
+            margin: 0 auto; 
+            padding: 20px;
+            background-color: #f8f8f8; 
+            border-radius: 10px; 
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+        }
+
+        .blog-card {
+            margin-bottom: 20px; 
+            padding: 15px;
+            background-color: #ffffff; 
+            border: 1px solid #e0e0e0; 
+            border-radius: 8px; 
+        }
+
+        .blog-card h3 {
+            color: #333333; 
+        }
+
+        .blog-card p {
+            color: #555555; 
+        }
+
+        .blog-card img {
+            max-width: 100%; /* Make the image responsive */
+            height: auto; /* Maintain the aspect ratio */
+            border-radius: 8px; /* Apply border-radius to the image */
+            margin-top: 10px; /* Add some margin for spacing */
+        }
+
+        .like-button {
+            background-color: #3498db; 
+            color: #ffffff;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .comments-section {
+            margin-top: 10px;
+        }
+
+        .comment-input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .comment-button {
+            background-color: #2ecc71; 
+            color: #ffffff; 
+            border: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .comment-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .blog-card:hover {
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); 
+        }
+
+        .blog-card {
+            transition: box-shadow 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <section id="blog">
+        <h2>Blog</h2>
+        <div class="blog-card">
+            <h3>Apple Vision Pro</h3>
+            <p>
+                here’s a lot of pressure on the new Apple Vision Pro, Apple’s long-awaited entry into the world of computers you wear on your face. Apple claims that the Vision Pro, which starts at $3,499, is the beginning of something called “spatial computing,” which basically boils down to running apps all around you. And the company’s ads for it do not hedge that pressure even a little: they show people wearing the Vision Pro all the time. At work! Doing laundry! Playing with their kids! The ambition is enormous: to layer apps and information over the real world — to augment reality.
+
+Apple has to claim that the Vision Pro is the beginning of something new because people have been building headset computers for over a decade now. I tried on a development prototype of the first Oculus Rift in 2013, and The Verge’s Adi Robertson, who edited this review, has tried basically every headset that’s been released since. All of that development means there are some pretty good products out there: that first Oculus evolved into the Quest line at Meta, which is now shipping the Quest 3 — a very good VR headset with a huge library of games and some AR features of its own, which costs $500.
+<img src="Apple-vision-pro.png">            
+</p>
+            <span class="like-counter" data-id="blog-1"></span>
+            <button class="like-button" data-id="blog-1" onclick="handleLike('blog-1')">Like</button>
+            <div class="comments-section">
+                <textarea class="comment-input" data-id="blog-1" placeholder="Add a comment"></textarea>
+                <button class="comment-button" data-id="blog-1" onclick="addComment('blog-1')">Comment</button>
+                <ul class="comment-list" data-id="blog-1"></ul>
+            </div>
+        </div>
+        <div class="blog-card">
+            <h3>Reforming BARD</h3>
+            <p>Google is planning some big changes for Bard — including its name.Android app developer Dylan Roussel leaked an apparent changelog this morning that says “Bard is now Gemini” — the name used for the new model Google put in service last year to compete with OpenAI’s GPT-4.</p>
+            <p>The log says Google will debut voice chat with Gemini, as well as a new “Ultra 1.0” model with “Gemini Advanced,” a paid plan that offers ChatGPT Plus-like file uploading features.</p>
+            <img src="Gemini BARD.png" alt="Gemini BARD Image">
+            <span class="like-counter" data-id="blog-2"></span>
+            <button class="like-button" data-id="blog-2" onclick="handleLike('blog-2')">Like</button>
+            <div class="comments-section">
+                <textarea class="comment-input" data-id="blog-2" placeholder="Add a comment"></textarea>
+                <button class="comment-button" data-id="blog-2" onclick="addComment('blog-2')">Comment</button>
+                <ul class="comment-list" data-id="blog-2"></ul>
+            </div>
+        </div>
+    </section>
+    <script src="blog.js"></script>
+</body>
+</html>
